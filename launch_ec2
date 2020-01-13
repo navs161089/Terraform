@@ -1,0 +1,12 @@
+#Sample code snippet to launch an EC2 instance.
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "terraform_example" {
+  ami           = "ami-00068cd7555f543d5"
+  instance_type = "t2.micro"
+  key_name = "py-boto3"
+  security_groups = ["custom_naveen"]
+}
